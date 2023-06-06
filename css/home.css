@@ -1,0 +1,370 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0px;
+    font-family: 'Kufam', sans-serif;
+}
+
+.section1{
+    padding: 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section1 img:not(.img2){
+    z-index: -1;
+    width:50%;
+}
+
+.child1 img{
+    width: 20vw;
+}
+
+.section1 .child1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    font-size:1.5vw;
+    color: black;
+}
+
+.childchild{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+    font-size: 3vw;
+}
+
+.childchild a{
+    color: black;
+}
+
+.childchild a:hover{
+    color: #0000cc;
+}
+
+.section1 span{
+    color: #0000cc;
+}
+
+@media (max-width:600px){
+    .section1{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+    }
+    .section1 img:not(.img2){
+        width: 90vw;
+    }
+    .child1 img{
+        width: 30vw;
+    }
+    .section1 .child1{
+        width: 90%;
+        font-size:4vw;
+    }       
+    .childchild{
+        font-size: 7vw;
+    }
+}
+
+/* //////////////////////////////////////////////// */
+
+.section2,
+.section4{
+    background-color: black;
+    padding: 10% 0px;
+    color: white;
+    font-size: 1.5vw;
+}
+.section2 .vline,
+.section4 .vline{
+    height: 3vw;
+    width: 1px;
+    background-color: white;
+}
+
+.section2 .parent{
+    background-color: white;
+    width: 70%;
+    color: #0000cc;
+    padding:3% 0px ;
+    border-radius:5px;
+}
+
+.section2 .parent .child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: -5%;
+}
+
+.section2 .parent .child p{
+    width: 70%;
+    text-align: left;
+}
+.section2 .parent .child .serve{
+    background-color: #0000cc;
+    color: white;
+    width: 20%;
+    padding: 4% 0px;
+    border-radius:5px;
+}
+
+@media (max-width:600px) {
+    .section2,.section4{
+        padding: 15% 0px;
+        font-size: 4vw;
+    }
+    .section2 .vline,
+    .section4 .vline{
+    height: 7vw;
+    }
+    .section2 .parent{
+        width: 80%;
+        margin-top: 5%;
+    }
+    .section2 .parent .child{
+        display: flex;
+        flex-direction: column;
+        margin-top: -10%;
+        margin-left: 0px;
+    }    
+    .section2 .parent .child p{
+        width: 80%;
+        text-align: center;
+    }    
+    .section2 .parent .child .serve{
+        width: 50%;
+        padding: 4% 0px;
+        margin-bottom: 5%;
+    }    
+}
+
+/* //////////////////////////////////////////////// */
+
+.section3,
+.section5{
+    padding: 10% 0px;
+    color: black;
+    font-size: 1.5vw;
+}
+
+.section3 .vline,
+.section5 .vline{
+    height: 3vw;
+    width: 1px;
+    background-color: black;
+}
+
+.section3 .parent{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section3 .parent2{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.section3 .child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 25vh;
+    border-radius: 50%;
+    background-color: #cccccc30;
+    box-shadow: -7px -7px 0px 0px #0000cc,
+                7px 7px 0px 0px black;
+}
+
+@media (max-width:600px) {
+    .section3,
+    .section5{
+        padding: 15% 0px;
+        font-size: 4vw;
+    }
+    .section3 .vline,
+    .section5 .vline{
+        height: 7vw;
+    }
+    .section3 .parent,
+    .section3 .parent2{
+        width: 90%;
+    }
+    .section3 .child{
+        width: 25%;
+        height: 20vh;
+    }
+}
+
+/* ////////////////////////////////////// */
+
+.section4 .parent{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section4 .parent > div{
+    width: 45%;
+    text-align: left;
+}
+
+.child12 img{
+    width: 30vw;
+}
+
+.child12{
+    position: relative;
+    z-index: 10;
+}
+
+.child12::before{
+    content: "";
+    background-color: #0000cc;
+    width: 30vw;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: rotate(5deg);
+}
+
+.child12::after{
+    content: "";
+    left: 0;
+    background-color:#660000;
+    width: 30vw;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: rotate(-5deg);
+}
+
+hr{
+    width: 70%;
+}
+
+.section4 a{
+    text-decoration: none;
+    color: #0000cc;
+}
+
+@media (max-width:600px){
+    .section4 .parent{
+        width: 90%;
+        flex-direction: column;
+    }
+    .section4 .parent > div{
+        width: 90%;
+        text-align: center;
+    }   
+    .child12 img{
+        width: 70vw;
+    }
+    .child12{
+        margin-bottom: 10%;
+    }    
+    .child12::after{
+        width: 70vw;
+        margin-left: 5%;
+    }
+    .child12::before{
+        width: 70vw;
+    }        
+    hr{
+        width: 90%;
+    }    
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.section5 .parent{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section5 form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.section5 input:not([type = "submit"]),
+.section5 textarea{
+    font-size: 1.5vw;
+    padding: 2% 5%;
+    border-radius: 5px;
+    border: transparent;
+    border-bottom: 3px solid #0000cc;
+    background-color: #cccccc30;
+    outline: none;
+}
+
+input[type = "submit"]{
+    width: 40%;
+    background-color: #0000cc;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    padding: 2% 5%;
+    border: transparent;
+}
+
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 20vh;
+    max-width: 20vh;
+}
+
+::placeholder{
+    opacity: 0.5;
+}
+
+.section5 .parent div{
+    background-color: #cccccc30;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5%;
+    width: 30%;
+    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.section5 .parent div p{
+    color: #0000cc;
+}
+
+@media (max-width:600px) {
+    .section5 .parent{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+    }    
+    .section5 form{
+        width: 70%;
+        align-items: center;
+    }    
+    .section5 input:not([type = "submit"]),
+    .section5 textarea,
+    input[type="submit"]{
+        font-size: 4vw;
+        padding: 2% 5%;
+    }
+    .section5 .parent div{
+        width: 70%;
+        margin-bottom: 10%;
+    }    
+}
+
